@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask ML API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Predict Iris Class</h1>
+        <form id="predictForm">
+            <label for="sepalLength">Sepal Length:</label>
+            <input type="number" id="sepalLength" name="sepalLength" step="any" required>
+            <label for="sepalWidth">Sepal Width:</label>
+            <input type="number" id="sepalWidth" name="sepalWidth" step="any" required>
+            <label for="petalLength">Petal Length:</label>
+            <input type="number" id="petalLength" name="petalLength" step="any" required>
+            <label for="petalWidth">Petal Width:</label>
+            <input type="number" id="petalWidth" name="petalWidth" step="any" required>
+            <button type="submit">Predict</button>
+        </form>
+        <div id="result">
+            <p id="predictionResult"></p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
